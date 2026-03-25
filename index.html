@@ -9,7 +9,40 @@
     background: black;
     color: white;
   }
+  .main-content {
+    padding: 30px;
+  }
+  .scroller {
+    margin-top: 30px;
+    padding: 3px;
+    width: full;
+    background: #00590c;
+    width: 100%;
+    height: 18px;
+  }
+  .scroler-text {
+    animation: scrollright 10s linear infinite;
+    transform: translateX(600%);
+    position: absolute;
+  }
+  @keyframes scrollright {
+     0% {
+      transform: translateX(300%); 		
+    }
+     100% {
+      transform: translateX(-100%); 
+     }
+  }
 </style>
 <body>
-  <h1>Hi i'm Yehor</h1>
+  <div class="scroller">
+        <span style="font-weight:bold; opacity: 50%" class="scroler-text">[the] Website is a work in progress!!!</span>
+    </div>
+  <div class="main-content">
+
+    <h1>Hi i'm Yehor!</h1>
+  </div>
 </body>
+<script>
+  
+</script>
