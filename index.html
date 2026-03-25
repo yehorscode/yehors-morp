@@ -4,8 +4,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <style>
+  @font-face {
+    font-family: "Minecraftia";
+    src: url("https://cdn.hackclub.com/019d2675-544e-7a50-924d-6527bd06ef01/Minecraftia-Regular.ttf") format("truetype");
+  }
   body {
-    font-family: "Domine";
+    font-family: "system-ui";
     background: black;
     color: white;
   }
@@ -33,16 +37,79 @@
       transform: translateX(-100%); 
      }
   }
+  .top-div {
+    display: flex;
+    flex: column;
+    flex-direction: column;
+    gap:5px;
+  }
+  .whativedone {
+    display: inline-flex;
+    position: relative;
+    flex-direction: column;
+    width: 420px;
+  }
+  .whativedone-text {
+     text-align: flex-end;
+     font-size: 25px;
+    font-weight: bold
+  }
+  .whativedone-box {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: black;
+    gap: 5px;
+    transition: 250ms ease;
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+    transition-delay: 1s;
+  }
+  .replacement-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index:1;
+    background: red;
+    padding: 10px;
+    color: black;
+    gap: 5px;
+    top: 0;
+    left: 0;
+    transform: translateY(-450px);
+    height: 150px
+  }
+  .whativedone-box:hover {
+    /* transform: scale(0.95); */
+    cursor: pointer;
+    transform: translateY(150px);
+    transition-delay: 0s;
+  }
 </style>
 <body>
   <div class="scroller">
         <span style="font-weight:bold; opacity: 50%" class="scroler-text">[the] Website is a work in progress!!!</span>
     </div>
   <div class="main-content">
-
-    <h1>Hi i'm Yehor!</h1>
+    <div class="top-div">
+      <h1>Hi i'm Yehor!</h1>
+      <span>You are now on my morp site. Im tryinh out the features of the editor.</span>
+      <span>I've previously done some <span style="opacity:40%">(i think)</span> cool sites and uhh below are examples</span>
+      <span style="opacity: 0.6">Please hover the boxes!!</span>
+    </div>
+    
+    <div class="whativedone" style="margin-top:20px">
+      <a class="whativedone-box" href="https://blueprint.yehor.pl.eu.org" style="background: #7594F0">
+        <img style="width:400px" src="https://user-cdn.hackclub-assets.com/019d266f-4565-7f2e-8236-5617d8f49066/Zrzut%20ekranu%20z%202026-03-25%2020-17-59.png"></img>
+        <span class="whativedone-text" style="font-family:'Minecraftia'">Blueprint</span>
+      </a>
+      <div class="replacement-box" style="background: #739440">
+        <span>A site that gets all (YES ALL) the addons that exist on Modrinth and CurseForge for Create Mod. Has an Appwrite backend but the frontend is in React.</span>
+        <a href="https://github.com/blueprint-site/blueprint-create" target="_blank">Source: GitHub</a>
+      </div>
+    </div>
   </div>
 </body>
 <script>
-  
 </script>
